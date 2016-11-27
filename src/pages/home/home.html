@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Loud
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <div class="background" [class.yellow]="loudness >= 60 && loudness <= 80" [class.orange]="loudness > 80 && loudness <= 100" [class.red]="loudness > 100">
+    <div class="flex-full">
+      <div class="circle">
+        <span class="loudness">{{ loudness }}</span> <span class="decibel">dB</span>
+      </div>
+    </div>
+  </div>
+</ion-content>
